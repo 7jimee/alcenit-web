@@ -1,0 +1,1277 @@
+/* =========================================================
+   ALCENIT TURISMO - ESTILOS
+   ========================================================= */
+
+:root {
+  --primary: #004e86;
+  --primary-dark: #004e86;
+  --secondary: #d4c8ae;
+  --dark: #004e86;
+  --text: #465b60;
+  --light: #f4f8f7;
+  --white: #ffffff;
+  --border: #dce8e7;
+
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 10;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo span {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo small {
+  margin-top: 7px;
+  font-size: 9px;
+  letter-spacing: 6px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: var(--dark);
+  position: relative;
+  padding: 10px 0;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: .3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 28px;
+  color: var(--dark);
+}
+
+/* ================= HERO / CARRUSEL ================= */
+
+.hero {
+  width: 100%;
+  min-height: 620px;
+}
+
+.carousel {
+  position: relative;
+  height: 620px;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 43, 50, .88) 0%,
+    rgba(6, 43, 50, .60) 45%,
+    rgba(6, 43, 50, .15) 100%
+  );
+}
+
+/*
+  PODÉS REEMPLAZAR ESTOS FONDOS POR TUS PROPIAS IMÁGENES.
+  Ejemplo:
+  background-image: url("img/turismo1.jpg");
+*/
+.bg1 {
+  background-image:
+    url("imagen\ 1.png");
+}
+
+.bg2 {
+  background-image:
+    url("imagen\ 2.png");
+}
+
+.bg3 {
+  background-image:
+    url("imagen\ 3.png");
+}
+
+.bg4 {
+  background-image:
+    url("imagen\ 4.png");
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1160px, 90%);
+  margin: 0 auto;
+  padding-top: 150px;
+  color: var(--white);
+}
+
+.eyebrow,
+.section-mini {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  max-width: 720px;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: var(--secondary);
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 570px;
+  font-size: 17px;
+  margin-bottom: 32px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50px;
+  padding: 14px 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: var(--dark);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(196, 174, 130, 0.25);
+}
+
+.carousel-btn {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255,255,255,.45);
+  background: rgba(0,0,0,.15);
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.carousel-btn:hover {
+  background: var(--secondary);
+  color: var(--dark);
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+.dots {
+  position: absolute;
+  z-index: 5;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 9px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.5);
+  transition: .3s;
+}
+
+.dot.active {
+  width: 30px;
+  border-radius: 20px;
+  background: var(--secondary);
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+  padding: 85px 0;
+  background: var(--white);
+}
+
+.services h2,
+.section-heading h2,
+.about h2,
+.contact h2 {
+  color: var(--dark);
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.1;
+  margin-bottom: 45px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  padding: 35px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+}
+
+.card-icon {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: var(--dark);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.service-card a {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-light {
+  background: var(--light);
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+  margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+  font-size: 15px;
+}
+
+/* ================= EDUCATIVOS ================= */
+
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.trip-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.year {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.trip-card h3 {
+  color: var(--dark);
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+.trip-card strong {
+  display: block;
+  color: var(--primary);
+  margin: 20px 0;
+  font-size: 13px;
+}
+
+.trip-card ul {
+  list-style: none;
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+  margin-bottom: 22px;
+}
+
+.trip-card li {
+  font-size: 12px;
+  margin: 7px 0;
+}
+
+.trip-card li::before {
+  content: "•";
+  color: var(--secondary);
+  margin-right: 7px;
+}
+
+.btn-outline {
+  width: 100%;
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ================= EGRESADOS ================= */
+
+.graduates {
+  background:
+    linear-gradient(90deg, rgba(77, 117, 162, 0.96), rgba(77,117,162,0.96)),
+    url("https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color: white;
+}
+
+.graduates-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.graduates h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(50px, 6vw, 80px);
+  line-height: .95;
+  margin-bottom: 25px;
+}
+
+.graduates h2 span {
+  color: var(--secondary);
+}
+
+.lead {
+  max-width: 600px;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.destination-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 30px;
+}
+
+.destination-list span {
+  border: 1px solid rgba(255,255,255,.35);
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+}
+
+.btn-white {
+  background: white;
+  color: var(--dark);
+}
+
+.package-box {
+  background: white;
+  color: var(--text);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(0,0,0,.15);
+}
+
+.package-box h3 {
+  color: var(--dark);
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.package-box ul {
+  list-style: none;
+}
+
+.package-box li {
+  padding: 7px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+
+.installments {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* ================= PAQUETES ================= */
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.destination-card {
+  min-height: 350px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+}
+
+.destination-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 30%, rgba(0,0,0,.82));
+}
+
+.destination-1 {
+  background-image: url("cataratas.jpeg") !important;
+}
+
+.destination-2 {
+  background-image: url("grupal.jpeg") !important;
+}
+
+.destination-3 {
+  background-image: url("avion.jpeg") !important;
+}
+
+.destination-card > div {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 28px;
+}
+
+.destination-card span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--secondary);
+}
+
+.destination-card h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin: 5px 0 18px;
+}
+
+.small-btn {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 30px;
+  padding: 9px 15px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.small-btn:hover {
+  background: white;
+  color: var(--dark);
+}
+
+/* ================= SOBRE NOSOTROS ================= */
+
+.about {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-decoration {
+  min-height: 430px;
+  border-radius: 30px;
+  background: var(--primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-decoration::before,
+.about-decoration::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+}
+
+.about-decoration::before {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  left: -120px;
+}
+
+.about-decoration::after {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -80px;
+}
+
+.about-decoration span {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  color: white;
+  font-size: 100px;
+}
+
+.about-content h2 span {
+  color: var(--primary);
+}
+
+.about-content > p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.about-features {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.about-features div {
+  flex: 1;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.about-features strong {
+  display: block;
+  color: var(--primary);
+  font-size: 24px;
+}
+
+.about-features span {
+  display: block;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+/* ================= CONTACTO ================= */
+
+.contact {
+  padding: 90px 0;
+  background: var(--dark);
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contact-grid > div:first-child > p:last-child {
+  max-width: 500px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(255,255,255,.06);
+  padding: 35px;
+  border-radius: var(--radius);
+}
+
+.contact-info a,
+.contact-info span {
+  font-size: 14px;
+}
+
+.contact-info .btn {
+  margin-top: 15px;
+  align-self: flex-start;
+}
+
+/* ================= VISOR DE GALERÍA ================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, .92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 85%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+
+.lightbox button {
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.4);
+  background: rgba(255,255,255,.1);
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.lightbox button:hover {
+  background: white;
+  color: var(--primary);
+}
+
+.lightbox-close {
+  top: 25px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #0d282d;
+  color: rgba(255,255,255,.65);
+  padding: 25px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-content .logo span {
+  color: white;
+  font-size: 23px;
+}
+
+.footer-content p {
+  font-size: 11px;
+}
+
+.back-top {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+  .nav {
+    gap: 13px;
+  }
+
+  .nav a {
+    font-size: 10px;
+  }
+
+  .cards,
+  .package-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .year-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .graduates-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-decoration {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .nav-container {
+    min-height: 75px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transform: translateY(-150%);
+    transition: .35s;
+  }
+
+  .nav.open {
+    transform: translateY(0);
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 12px 5%;
+    font-size: 11px;
+  }
+
+  .carousel,
+  .hero {
+    min-height: 570px;
+    height: 570px;
+  }
+
+  .hero-content {
+    padding-top: 120px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .prev {
+    left: 15px;
+  }
+
+  .next {
+    right: 15px;
+  }
+.cards,
+.year-grid,
+.package-grid,
+.gallery-grid {
+  grid-template-columns: 1fr;
+}
+
+  .section,
+  .services {
+    padding: 70px 0;
+  }
+
+  .about-features {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ================= GALERÍA DE EGRESADOS ================= */
+
+.gallery-section {
+  background: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery-item {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 18px;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  color: white;
+  background: linear-gradient(
+    transparent 35%,
+    rgba(0,0,0,.75)
+  );
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay span {
+  color: var(--secondary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.gallery-overlay h3 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+/* ================= BOTÓN FLOTANTE WHATSAPP ================= */
+
+.whatsapp-float {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+
+  width: 60px;
+  height: 60px;
+
+  background: #25D366;
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 28px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
+
+  z-index: 1500;
+
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+}
+
+/* ================= DESTINOS ================= */
+
+.destinations-section {
+  background: #f7f9fc;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.destination-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.destination-content {
+  padding: 25px;
+}
+
+.destination-content span {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.destination-content h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  color: #17324d;
+  margin: 8px 0;
+}
+
+.destination-content p {
+  color: #667788;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.destination-content button {
+  border: none;
+  background: var(--primary);
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.destination-content button:hover {
+  background: #00395f;
+  transform: translateX(4px);
+}
+
+
+/* ---------- CELULAR ---------- */
+
+@media (max-width: 700px) {
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-card img {
+    height: 220px;
+  }
+
+}
+
+/* TAMAÑO DE LOS 3 CUADROS PRINCIPALES */
+.destination-1,
+.destination-2,
+.destination-3 {
+  min-height: 350px !important;
+  height: 350px !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* =====================================================
+   DESTINOS
+   ===================================================== */
+
+.destinations-section {
+  background: #f7f9fc;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* TARJETAS */
+
+.travel-destination-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.travel-destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+}
+
+
+/* IMAGEN */
+
+.travel-destination-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* CONTENIDO */
+
+.travel-destination-content {
+  padding: 25px;
+}
+
+.travel-destination-content span {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.travel-destination-content h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  color: #17324d;
+  margin: 8px 0;
+}
+
+.travel-destination-content p {
+  color: #667788;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* BOTÓN */
+
+.travel-destination-content button {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.travel-destination-content button:hover {
+  background: #00395f;
+  transform: translateX(4px);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-destination-card img {
+    height: 220px;
+  }
+
+}

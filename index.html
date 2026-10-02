@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alcenit Turismo - Turismo educativo, viajes de egresados y paquetes turísticos.">
+  <title>Alcenit Turismo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container nav-container">
+
+     <a href="#inicio" class="logo">
+  <img src="LOGO.png" alt="Alcenit Turismo">
+</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+      <nav class="nav" id="nav">
+  <a href="#inicio">INICIO</a>
+  <a href="#sobre-nosotros">SOBRE NOSOTROS</a>
+  <a href="#educativos">EDUCATIVOS</a>
+  <a href="#egresados">EGRESADOS</a>
+  <a href="#galeria">GALERÍA</a>
+  <a href="#paquetes">PAQUETES</a>
+  <a href="#contacto">CONTACTO</a>
+</nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= INICIO / CARRUSEL ================= -->
+    <section id="inicio" class="hero">
+
+      <div class="carousel">
+
+        <div class="slide active">
+          <div class="slide-bg bg1"></div>
+          <div class="hero-content">
+            <p class="eyebrow">ALCENIT TURISMO</p>
+            <h1>Diseñemos juntos<br><span>tu próximo viaje</span></h1>
+            <p>Experiencias educativas y recreativas pensadas para cada grupo.</p>
+            <a href="#paquetes" class="btn btn-primary">VER VIAJES</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-bg bg2"></div>
+          <div class="hero-content">
+            <p class="eyebrow">TURISMO EDUCATIVO</p>
+            <h1>Aprender también<br><span>es viajar</span></h1>
+            <p>Propuestas adaptadas a las necesidades de cada institución.</p>
+            <a href="#educativos" class="btn btn-primary">VER EDUCATIVOS</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-bg bg3"></div>
+          <div class="hero-content">
+            <p class="eyebrow">VIAJES DE EGRESADOS</p>
+            <h1>Viví una experiencia<br><span>inolvidable</span></h1>
+            <p>Organización, acompañamiento y propuestas para cada grupo.</p>
+            <a href="#egresados" class="btn btn-primary">VER EGRESADOS</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-bg bg4"></div>
+          <div class="hero-content">
+            <p class="eyebrow">ALCENIT TURISMO</p>
+            <h1>Tu viaje empieza<br><span>acá</span></h1>
+            <p>Más de 20 años de aval docente y experiencia.</p>
+            <a href="#contacto" class="btn btn-primary">CONTACTANOS</a>
+          </div>
+        </div>
+
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">❮</button>
+        <button class="carousel-btn next" id="nextBtn" aria-label="Imagen siguiente">❯</button>
+
+        <div class="dots" id="dots">
+          <button class="dot active" aria-label="Slide 1"></button>
+          <button class="dot" aria-label="Slide 2"></button>
+          <button class="dot" aria-label="Slide 3"></button>
+          <button class="dot" aria-label="Slide 4"></button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section class="services">
+      <div class="container">
+        <p class="section-mini">NUESTRAS PROPUESTAS</p>
+        <h2>Servicios turísticos</h2>
+
+        <div class="cards">
+
+          <article class="service-card">
+            <div class="card-icon">🎒</div>
+            <h3>Turismo Educativo</h3>
+            <p>Viajes pensados para acompañar experiencias educativas y recreativas.</p>
+            <a href="#educativos">VER MÁS →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon">🎓</div>
+            <h3>Egresados</h3>
+            <p>Propuestas para disfrutar y compartir una experiencia inolvidable.</p>
+            <a href="#egresados">VER MÁS →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="card-icon">✈️</div>
+            <h3>Paquetes turísticos</h3>
+            <p>Planes estándar y propuestas personalizadas para cada grupo.</p>
+            <a href="#paquetes">VER MÁS →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATIVOS ================= -->
+    <section id="educativos" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-mini">TURISMO EDUCATIVO</p>
+          <h2>Propuestas para cada año</h2>
+          <p>Elegí la propuesta y consultanos para conocer todos los detalles.</p>
+        </div>
+
+        <div class="year-grid">
+
+          <article class="trip-card">
+            <span class="year">1° AÑO</span>
+            <h3>San Lorenzo</h3>
+            <p>Rosario</p>
+            <strong>Presupuesto: $90.000</strong>
+            <ul>
+              <li>Sitios a visitar</li>
+              <li>Observaciones</li>
+            </ul>
+            <button class="btn btn-outline" onclick="consultar('Turismo Educativo - 1° año')">VER MÁS</button>
+          </article>
+
+          <article class="trip-card">
+            <span class="year">2° AÑO</span>
+            <h3>Santa Fe</h3>
+            <p>Rosario</p>
+            <strong>Presupuesto: $180.000</strong>
+            <ul>
+              <li>Sitios a visitar</li>
+              <li>Observaciones</li>
+            </ul>
+            <button class="btn btn-outline" onclick="consultar('Turismo Educativo - 2° año')">VER MÁS</button>
+          </article>
+
+          <article class="trip-card">
+            <span class="year">3° AÑO</span>
+            <h3>Entre Ríos</h3>
+            <p>Rosario</p>
+            <strong>Presupuesto: $180.000</strong>
+            <ul>
+              <li>Sitios a visitar</li>
+              <li>Observaciones</li>
+            </ul>
+            <button class="btn btn-outline" onclick="consultar('Turismo Educativo - 3° año')">VER MÁS</button>
+          </article>
+
+          <article class="trip-card">
+            <span class="year">4° AÑO</span>
+            <h3>Buenos Aires</h3>
+            <p>Rosario</p>
+            <strong>Presupuesto: $180.000</strong>
+            <ul>
+              <li>Sitios a visitar</li>
+              <li>Observaciones</li>
+            </ul>
+            <button class="btn btn-outline" onclick="consultar('Turismo Educativo - 4° año')">VER MÁS</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EGRESADOS ================= -->
+    <section id="egresados" class="section graduates">
+      <div class="container graduates-grid">
+
+        <div>
+          <p class="section-mini">EGRESADOS SECUNDARIO</p>
+          <h2>Cataratas<br><span>2027</span></h2>
+          <p class="lead">
+            Una experiencia para disfrutar, conocer y compartir con todo el curso.
+          </p>
+
+          <div class="destination-list">
+            <span>Puerto Iguazú</span>
+            <span>Cataratas del Iguazú</span>
+            <span>Minas de Wanda</span>
+            <span>Buenos Aires</span>
+          </div>
+
+          <button class="btn btn-white" onclick="consultar('Viaje de egresados - Cataratas 2027')">
+            CONSULTAR VIAJE
+          </button>
+        </div>
+
+        <div class="package-box">
+          <h3>El paquete incluye</h3>
+          <ul>
+            <li>✓ Hospedaje Hotel Saint George</li>
+            <li>✓ Desayuno</li>
+            <li>✓ Almuerzo</li>
+            <li>✓ Merienda</li>
+            <li>✓ Cena</li>
+            <li>✓ Traslados aéreos y/o terrestres</li>
+            <li>✓ Coordinadores</li>
+          </ul>
+          <p class="installments">Hasta 18 cuotas a financiar. Consultar.</p>
+        </div>
+
+      </div>
+    </section>
+
+<!-- ================= GALERÍA DE EGRESADOS ================= -->
+
+<section id="galeria" class="section gallery-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="section-mini">MOMENTOS QUE QUEDAN</p>
+
+      <h2>Vivimos estos viajes juntos</h2>
+
+      <p>
+        Algunas experiencias compartidas con nuestros grupos de egresados.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img class="gallery-image" src="egresados 2026/minaswanda.jpeg" alt="Viaje de egresados">
+        <div class="gallery-overlay">
+          <span>EGRESADOS</span>
+          <h3>Momentos inolvidables</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img class="gallery-image" src="egresados 2026/imagenhito 2.jpeg" alt="Viaje de egresados">
+        <div class="gallery-overlay">
+          <span>EGRESADOS</span>
+          <h3>Una experiencia para recordar</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img class="gallery-image" src="egresados 2026/imagengrupal.jpeg" alt="Viaje de egresados">
+        <div class="gallery-overlay">
+          <span>EGRESADOS</span>
+          <h3>Compartir el viaje</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img class="gallery-image" src="egresados 2026/grupal2.jpeg" alt="Viaje de egresados">
+        <div class="gallery-overlay">
+          <span>EGRESADOS</span>
+          <h3>Recuerdos que quedan</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img class="gallery-image" src="egresados 2026/excursion.jpeg" alt="Viaje de egresados">
+        <div class="gallery-overlay">
+          <span>EGRESADOS</span>
+          <h3>Momentos únicos</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img class="gallery-image" src="egresados 2026/aeropuerto.jpeg" alt="Viaje de egresados">
+        <div class="gallery-overlay">
+          <span>EGRESADOS</span>
+          <h3>Un viaje para recordar</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- ================= PAQUETES ================= -->
+    <section id="paquetes" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-mini">PAQUETES TURÍSTICOS</p>
+          <h2>Encontrá tu próximo destino</h2>
+          <p>Planes estándar y propuestas personalizadas según cada grupo.</p>
+        </div>
+
+        <div class="package-grid">
+
+          <article class="destination-card destination-1">
+            <div>
+              <span>DESTINO</span>
+              <h3>Cataratas</h3>
+              <button class="small-btn" onclick="consultar('Paquete Cataratas')">CONSULTAR</button>
+            </div>
+          </article>
+
+          <article class="destination-card destination-2">
+            <div>
+              <span>VIAJES</span>
+              <h3>Propuestas educativas</h3>
+              <button class="small-btn" onclick="consultar('Paquetes educativos')">CONSULTAR</button>
+            </div>
+          </article>
+
+          <article class="destination-card destination-3">
+            <div>
+              <span>PERSONALIZADO</span>
+              <h3>Diseñemos tu viaje</h3>
+              <button class="small-btn" onclick="consultar('Viaje personalizado')">CONSULTAR</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE NOSOTROS ================= -->
+    <section id="sobre-nosotros" class="section about">
+      <div class="container about-grid">
+
+        <div class="about-decoration">
+          <span>✈</span>
+          <div></div>
+        </div>
+
+        <div class="about-content">
+          <p class="section-mini">SOBRE NOSOTROS</p>
+          <h2>Más que un viaje,<br><span>una experiencia.</span></h2>
+
+          <p>
+            Alcenit Turismo es una agencia de viajes especializada en diseñar
+            experiencias educativas y recreativas pensadas para cada grupo.
+            Con más de 20 años de aval docente, trabajamos con compromiso,
+            experiencia y responsabilidad.
+          </p>
+
+          <p>
+            Ofrecemos planes estándar y propuestas personalizadas, adaptándonos
+            a los objetivos pedagógicos, necesidades y presupuestos de cada grupo.
+          </p>
+
+          <p>
+            Brindamos asesoramiento durante todo el proceso, desde la planificación
+            del itinerario hasta la coordinación del viaje.
+          </p>
+
+          <div class="about-features">
+            <div>
+              <strong>+20</strong>
+              <span>años de aval docente</span>
+            </div>
+            <div>
+              <strong>✓</strong>
+              <span>Marca registrada</span>
+            </div>
+            <div>
+              <strong>✓</strong>
+              <span>Inscripta en ARCA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-grid">
+
+        <div>
+          <p class="section-mini">CONTACTO</p>
+          <h2>¿Diseñamos<br>tu próximo viaje?</h2>
+          <p>Comunicate con nosotros para consultar propuestas, presupuestos y destinos.</p>
+        </div>
+
+        <div class="contact-info">
+          <a href="tel:+543413634545">📞 341 363 4545</a>
+          <a href="tel:+543412856464">📞 341 285 6464</a>
+          <a href="mailto:turismoalcenit@gmail.com">✉️ turismoalcenit@gmail.com</a>
+          <span>📍 Rosario, Santa Fe</span>
+
+          <button class="btn btn-primary" onclick="abrirWhatsApp()">
+            ESCRIBIR POR WHATSAPP
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+<!-- ================= DESTINOS ================= -->
+<section id="destinos" class="section destinations-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="section-mini">DESCUBRÍ NUEVOS LUGARES</p>
+
+      <h2>Nuestros destinos</h2>
+
+      <p>
+        Elegí tu próximo destino y comenzá a imaginar tu viaje.
+      </p>
+    </div>
+
+
+    <div class="destinations-grid">
+
+      <!-- MISIÓNES -->
+      <article class="travel-destination-card">
+
+        <img src="cataratassss.jpeg" alt="Cataratas del Iguazú">
+
+        <div class="travel-destination-content">
+
+          <span>ARGENTINA</span>
+
+          <h3>Misiones</h3>
+
+          <p>
+            Naturaleza, aventuras y las increíbles Cataratas del Iguazú.
+          </p>
+
+          <button onclick="abrirDestino('misiones')">
+            Ver destino →
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- BUENOS AIRES -->
+      <article class="travel-destination-card">
+
+        <img src="caminitobsas.jpg" alt="Buenos Aires">
+
+        <div class="travel-destination-content">
+
+          <span>ARGENTINA</span>
+
+          <h3>Buenos Aires</h3>
+
+          <p>
+            Paisajes, cultura y experiencias para disfrutar en grupo.
+          </p>
+
+          <button onclick="abrirDestino('buenos aires')">
+            Ver destino →
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- SAN LORENZO -->
+      <article class="travel-destination-card">
+
+        <img src="conventoslorenzo.jpg" alt="San Lorenzo">
+
+        <div class="travel-destination-content">
+
+          <span>ARGENTINA</span>
+
+          <h3>San Lorenzo</h3>
+
+          <p>
+            Excursiones y momentos para compartir con tu grupo.
+          </p>
+
+          <button onclick="abrirDestino('san lorenzo')">
+            Ver destino →
+          </button>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container footer-content">
+      <div class="logo">
+        <span>Alcenit</span>
+        <small>T U R I S M O</small>
+      </div>
+
+      <p>© 2026 Alcenit Turismo. Todos los derechos reservados.</p>
+
+      <a href="#inicio" class="back-top">↑</a>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/543413634545?text=Hola%20Alcenit%20Turismo%20%F0%9F%91%8B%20Quiero%20consultar%20por%20un%20viaje."
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Contactar por WhatsApp">
+
+  <span>💬</span>
+
+</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
